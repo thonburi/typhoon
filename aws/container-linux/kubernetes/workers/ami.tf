@@ -1,7 +1,7 @@
 locals {
   # Pick a Flatcar Linux AMI
   # flatcar-stable -> Flatcar Linux AMI
-  ami_id = data.aws_ami.flatcar.image_id
+  ami_id  = data.aws_ami.flatcar.image_id
   channel = split("-", var.os_image)[1]
 }
 
@@ -11,7 +11,7 @@ data "aws_ami" "flatcar" {
 
   filter {
     name   = "architecture"
-    values = ["x86_64"]
+    values = ["arm64"]
   }
 
   filter {

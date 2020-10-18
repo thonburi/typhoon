@@ -11,7 +11,7 @@ data "aws_ami" "flatcar" {
 
   filter {
     name   = "architecture"
-    values = ["arm64"]
+    values = ["x86_64"]
   }
 
   filter {
@@ -24,4 +24,3 @@ data "aws_ami" "flatcar" {
     values = ["Flatcar-${local.channel}-*"]
   }
 }
-
